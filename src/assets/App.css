@@ -1,0 +1,639 @@
+/* ========== RESET GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ========== CONTAINER AVEC PADDING TOP/BOTTOM ========== */
+.MuiContainer-root {
+  max-width: 1400px !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  padding-top: 2.5rem !important;
+  padding-bottom: 4rem !important;
+  margin: 0 auto !important;
+}
+
+/* ========== CARDS AVEC LARGEUR MAX ========== */
+.MuiCard-root,
+.MuiPaper-elevation1,
+.MuiPaper-elevation2 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+/* Fix largeur cards boutiques ET produits */
+.MuiGrid-item .MuiCard-root {
+  max-width: 100% !important;
+  margin: 0 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+
+/* ========== TYPOGRAPHY RESPONSIVE ========== */
+.MuiTypography-h1 {
+  font-size: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.MuiTypography-h2 {
+  font-size: 1.75rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.MuiTypography-h3 {
+  font-size: 1.5rem !important;
+}
+
+.MuiTypography-h4 {
+  font-size: 1.25rem !important;
+}
+
+.MuiTypography-h5 {
+  font-size: 1.1rem !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 0.95rem !important;
+}
+
+.MuiTypography-body2 {
+  font-size: 0.875rem !important;
+}
+
+/* ========== FORMULAIRES LARGEUR OPTIMISÉE ========== */
+
+/* Form controls largeur par défaut */
+.MuiFormControl-root {
+  width: 100% !important;
+  max-width: 300px !important;
+  margin-bottom: 1rem !important;
+}
+
+/* TextField plus large sur desktop pour formulaires */
+@media (min-width: 900px) {
+  /* Formulaires de création/édition */
+  .MuiPaper-root .MuiFormControl-root:has(.MuiTextField-root) {
+    max-width: 600px !important;
+  }
+
+  /* TextField "Nom" plus large */
+  .MuiPaper-root .MuiTextField-root[label="Nom"],
+  .MuiPaper-root .MuiTextField-root[label*="Nom"] {
+    max-width: 600px !important;
+  }
+
+  /* Box width pour formulaires */
+  .MuiPaper-root .MuiBox-root:has(.MuiFormControl-root) {
+    width: 80% !important;
+    max-width: 800px !important;
+  }
+}
+
+/* SELECT/FILTRE AVEC MAX-WIDTH */
+.MuiSelect-select {
+  font-size: 0.95rem !important;
+}
+
+/* ========== GRID RESPONSIVE ========== */
+.MuiGrid-container {
+  width: 100% !important;
+  margin: 0 !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.MuiGrid-item {
+  padding: 1rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}
+
+
+/* ========== BUTTONS RESPONSIVE ========== */
+.MuiFab-root,
+.MuiButton-root {
+  font-size: 0.875rem !important;
+}
+
+.MuiFab-extended {
+  padding: 0.5rem 1rem !important;
+}
+
+/* ========== NAVBAR RESPONSIVE ========== */
+.MuiAppBar-root {
+  position: sticky !important;
+  top: 0;
+  z-index: 1100;
+  margin-bottom: 0 !important;
+}
+
+/* Navbar compact sur écran moyen */
+@media (max-width: 899px) {
+  /* Réduire taille du logo */
+  .MuiToolbar-root .MuiTypography-h6 {
+    font-size: 1rem !important;
+  }
+
+  /* Réduire taille des liens */
+  .MuiToolbar-root a {
+    font-size: 0.85rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  /* Réduire l'espacement */
+  .MuiToolbar-root .MuiBox-root {
+    gap: 0.5rem !important;
+  }
+
+  /* Toolbar padding réduit */
+  .MuiToolbar-root {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    min-height: 56px !important;
+  }
+}
+
+/* ========== PAGINATION SPACING AUGMENTÉ ========== */
+.MuiPagination-root {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+/* ========== MOBILE (< 600px) ========== */
+@media (max-width: 599px) {
+  body {
+    font-size: 14px;
+  }
+
+  .MuiTypography-h1 {
+    font-size: 1.5rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .MuiTypography-h2 {
+    font-size: 1.35rem !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .MuiTypography-h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.1rem !important;
+  }
+
+  .MuiTypography-body1 {
+    font-size: 0.875rem !important;
+  }
+
+  .MuiTypography-body2 {
+    font-size: 0.8rem !important;
+  }
+
+  /* Container padding réduit avec espace en haut/bas */
+  .MuiContainer-root {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Grid 1 colonne */
+  .MuiGrid-item {
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  /* Cards largeur complète sur mobile */
+  .MuiGrid-item .MuiCard-root {
+    max-width: 100% !important;
+  }
+
+  /* Buttons plus petits */
+  .MuiFab-root,
+  .MuiButton-root {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .MuiFab-extended {
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  /* Paper padding réduit */
+  .MuiPaper-root {
+    padding: 1rem !important;
+  }
+
+  /* Form controls width 100% sur mobile */
+  .MuiFormControl-root {
+    max-width: 100% !important;
+  }
+
+  /* TextField compact */
+  .MuiTextField-root .MuiInputBase-input {
+    font-size: 0.875rem !important;
+    padding: 0.75rem !important;
+  }
+
+  .MuiInputLabel-root {
+    font-size: 0.875rem !important;
+  }
+
+  /* Select compact */
+  .MuiSelect-select {
+    font-size: 0.875rem !important;
+    padding: 0.75rem !important;
+  }
+
+  /* Divider spacing réduit */
+  .MuiDivider-root {
+    margin: 1rem 0 !important;
+  }
+
+  /* Fab plus petit */
+  .MuiFab-sizeSmall {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* Navbar très compact sur mobile */
+  .MuiToolbar-root .MuiTypography-h6 {
+    font-size: 0.9rem !important;
+  }
+
+  .MuiToolbar-root a {
+    font-size: 0.75rem !important;
+    padding: 0.2rem 0.4rem !important;
+  }
+
+  /* Pagination compact */
+  .MuiPagination-root {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .MuiPaginationItem-root {
+    font-size: 0.8rem !important;
+    min-width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* TimePickers en colonne sur mobile */
+  .MuiPaper-elevation2:has(.MuiTimePicker-root) .MuiBox-root {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* TimePicker width 100% */
+  .MuiFormControl-root:has(.MuiTimePicker-root) {
+    max-width: 100% !important;
+  }
+
+  /* Form Box width 100% sur mobile */
+  .MuiPaper-root .MuiBox-root:has(.MuiFormControl-root) {
+    width: 100% !important;
+  }
+}
+
+/* ========== TABLET (600px - 899px) ========== */
+@media (min-width: 600px) and (max-width: 899px) {
+  body {
+    font-size: 15px;
+  }
+
+  .MuiTypography-h1 {
+    font-size: 1.75rem !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .MuiTypography-h2 {
+    font-size: 1.5rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Grid 2 colonnes */
+  .MuiGrid-item[class*="Grid-grid-xs-4"],
+  .MuiGrid-item[class*="Grid-grid-md-4"] {
+    max-width: 50% !important;
+    flex-basis: 50% !important;
+  }
+
+  .MuiContainer-root {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Cards max 350px sur tablet */
+  .MuiGrid-item .MuiCard-root {
+    max-width: 350px !important;
+  }
+
+  /* Form controls largeur moyenne */
+  .MuiPaper-root .MuiFormControl-root:has(.MuiTextField-root) {
+    max-width: 450px !important;
+  }
+
+  /* Pagination spacing */
+  .MuiPagination-root {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+}
+
+/* ========== DESKTOP (900px - 1279px) ========== */
+@media (min-width: 900px) and (max-width: 1279px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Grid 3 colonnes */
+  .MuiGrid-item[class*="Grid-grid-xs-4"],
+  .MuiGrid-item[class*="Grid-grid-md-4"] {
+    max-width: 33.333333% !important;
+    flex-basis: 33.333333% !important;
+  }
+
+  .MuiContainer-root {
+    max-width: 1200px !important;
+  }
+
+  /* Cards max 380px sur desktop */
+  .MuiGrid-item .MuiCard-root {
+    max-width: 380px !important;
+  }
+}
+
+/* ========== LARGE DESKTOP (>= 1280px) ========== */
+@media (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+
+  /* Grid 3 colonnes */
+  .MuiGrid-item[class*="Grid-grid-xs-4"],
+  .MuiGrid-item[class*="Grid-grid-md-4"] {
+    max-width: 33.333333% !important;
+    flex-basis: 33.333333% !important;
+  }
+
+  .MuiContainer-root {
+    max-width: 1400px !important;
+  }
+
+  /* Cards max 420px */
+  .MuiGrid-item .MuiCard-root {
+    max-width: 420px !important;
+  }
+}
+
+/* ========== EXTRA LARGE (>= 1920px) ========== */
+@media (min-width: 1920px) {
+  .MuiContainer-root {
+    max-width: 1600px !important;
+  }
+
+  /* Grid 4 colonnes sur très grand écran */
+  .MuiGrid-item[class*="Grid-grid-xs-4"],
+  .MuiGrid-item[class*="Grid-grid-md-4"] {
+    max-width: 25% !important;
+    flex-basis: 25% !important;
+  }
+
+  /* Cards max 400px */
+  .MuiGrid-item .MuiCard-root {
+    max-width: 400px !important;
+  }
+
+  /* Form controls encore plus larges sur très grand écran */
+  .MuiPaper-root .MuiFormControl-root:has(.MuiTextField-root) {
+    max-width: 700px !important;
+  }
+
+  .MuiPaper-root .MuiBox-root:has(.MuiFormControl-root) {
+    width: 80% !important;
+    max-width: 1000px !important;
+  }
+}
+
+/* ========== AMÉLIORATION VISUELLE ========== */
+
+/* Cards hover effect */
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Amélioration des boutons */
+.MuiButton-contained:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+
+/* Fix scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ========== FIX SPÉCIFIQUES ========== */
+
+/* Fix overflow */
+@media (max-width: 599px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .MuiGrid-container {
+    overflow-x: hidden;
+  }
+
+  /* Select jour compact */
+  .MuiSelect-select[aria-labelledby*="day-label"] {
+    min-width: 100px !important;
+  }
+}
+
+/* Fix Select width */
+.MuiFormControl-root .MuiSelect-select {
+  min-width: 120px;
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Fix Fab position */
+.MuiFab-root[aria-label="add"] {
+  margin: 0.5rem 0 !important;
+}
+
+/* ========== CENTRAGE GÉNÉRAL ========== */
+.MuiBox-root:has(.MuiGrid-container) {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Fix Box filtre/sort */
+.MuiBox-root:has(.MuiFormControl-root) {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 599px) {
+  .MuiBox-root:has(.MuiFormControl-root) {
+    padding: 0 0.75rem;
+  }
+}
+
+/* ========== AMÉLIORATION ESPACEMENT PAGES ========== */
+
+/* Espacement après la navbar */
+.MuiAppBar-root + * {
+  margin-top: 0 !important;
+}
+
+/* Espacement pour le premier élément du container */
+.MuiContainer-root > *:first-child {
+  padding-top: 0 !important;
+}
+
+/* Fix Paper padding pour formulaires */
+.MuiPaper-root:has(.MuiFormControl-root) {
+  padding: 2rem !important;
+}
+
+@media (max-width: 599px) {
+  .MuiPaper-root:has(.MuiFormControl-root) {
+    padding: 1.25rem !important;
+  }
+}
+
+/* ========== FIX PRODUCT CARDS SPACING ========== */
+
+/* Espacement pour les produits */
+.MuiGrid-container[class*="spacing"] .MuiGrid-item {
+  padding: 1.5rem !important;
+}
+
+/* Responsive cards width */
+@media (max-width: 599px) {
+  .MuiGrid-item .MuiCard-root {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+  .MuiGrid-item .MuiCard-root {
+    max-width: 400px !important;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .MuiGrid-item .MuiCard-root {
+    max-width: 350px !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .MuiGrid-item .MuiCard-root {
+    max-width: 380px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .MuiGrid-item .MuiCard-root {
+    max-width: 420px !important;
+  }
+}
+
+/* ========== FIX SPECIFIC POUR SHOPPRODUCTS ========== */
+
+/* Forcer layout correct pour les produits de boutique */
+.MuiGrid-container.MuiGrid-spacing-xs-3 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+}
+
+.MuiGrid-container.MuiGrid-spacing-xs-3 .MuiGrid-item {
+  max-width: 100% !important;
+  padding: 0 !important;
+  flex-basis: auto !important;
+}
+
+/* Responsive grid */
+@media (min-width: 600px) {
+  .MuiGrid-container.MuiGrid-spacing-xs-3 {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .MuiGrid-container.MuiGrid-spacing-xs-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .MuiGrid-container.MuiGrid-spacing-xs-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .MuiGrid-container.MuiGrid-spacing-xs-3 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2.5rem !important;
+  }
+}
