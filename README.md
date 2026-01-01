@@ -1,11 +1,6 @@
 # Shop client
 
-Frontend de l'application de gestion de boutiques développé avec React 18.
-
-## Prérequis
-
-- Node.js 20 LTS
-- npm 10+
+Frontend de l'application de gestion de boutiques développé avec React.
 
 ## Lancer l'application avec npm
 
@@ -28,15 +23,6 @@ Depuis la racine du projet principal (où se trouve docker-compose.yml), exécut
 docker compose up
 
 L'application frontend sera accessible à l'adresse http://localhost:4200
-
-## Technologies utilisées
-
-- React 18.2.0
-- TypeScript 5.3.3
-- React Router DOM 6.21.1
-- Axios 1.6.5
-- Material-UI 5.15.6
-- Node.js 20 LTS
 
 ## Fonctionnalités
 
